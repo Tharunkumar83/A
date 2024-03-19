@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website slider</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li class="item1 active"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+            </ol>
+            <div class="carousel-inner" role="listitem">
+                <div class="item active">
+                    <img src="https://blog.bramanmini.com/wp-content/uploads/2019/02/MINI-JCW-GP-MINI-Cooper-JCW-2020-1-1024x512.jpg"
+                        height="300%" width="100%" alt="image1">
+                </div>
+                <div class="item">
+                    <img src="https://cdn.motor1.com/images/mgl/Oo3xke/s1/mansory-p9lm-evo-900-porsche-911-turbo-s.webp"
+                        height="300%" width="1000%" alt="image2">
+                </div>
+                <div class="item">
+                    <img src="https://www.slashgear.com/img/gallery/12-most-expensive-mercedes-of-all-time/l-intro-1701212622.jpg"
+                        height="100%" width="100%" alt="image3">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">prev</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">next</span>
+            </a>
+            <div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("#myCarousel").carousel();
+                $(".item1").click(function () {
+                    $("#myCarousel").carousel(0);
+                })
+                $(".item2").click(function () {
+                    $("#myCarousel").carousel(1);
+                })
+                $(".item3").click(function () {
+                    $("#myCarousel").carousel(2);
+                })
+                $(".left").click(function () {
+                    $("#myCarousel").carousel("prev");
+                })
+                $(".right").click(function () {
+                    $("#myCarousel").carousel("next");
+                })
+            });
+        </script>
+</body>
+
+</html>
